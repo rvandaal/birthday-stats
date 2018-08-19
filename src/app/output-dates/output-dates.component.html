@@ -7,7 +7,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let gebeurtenis of gebeurtenissen">
-      <th scope="row">{{gebeurtenis.datum}}</th>
+      <td>{{gebeurtenis.datum | date: 'dd MMM yyyy'}}</td>
       <td>{{gebeurtenis.info}}</td>
     </tr>
   </tbody>
