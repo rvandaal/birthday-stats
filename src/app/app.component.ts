@@ -37,49 +37,56 @@ export class AppComponent implements OnInit {
     // if (i === 0) {
     //   return this.fb.group({
     //     name: 'Peter',
-    //     birthdate: new NgbDate(1947, 10, 28)
+    //     birthdate: new NgbDate(1947, 10, 28),
+    //     display: true
     //   });
     // }
     // if (i === 1) {
     //   return this.fb.group({
     //     name: 'Marian',
-    //     birthdate: new NgbDate(1949, 4, 4)
+    //     birthdate: new NgbDate(1949, 4, 4),
+    //     display: true
     //   });
     // }
     // if (i === 4) {
     //   return this.fb.group({
     //     name: 'Rob',
-    //     birthdate: new NgbDate(1975, 6, 19)
+    //     birthdate: new NgbDate(1975, 6, 19),
+    //     display: true
     //   });
     // }
     // if (i === 2) {
     //   return this.fb.group({
     //     name: 'Frank',
-    //     birthdate: new NgbDate(1977, 1, 15)
+    //     birthdate: new NgbDate(1977, 1, 15),
+    //     display: true
     //   });
     // }
     // if (i === 3) {
     //   return this.fb.group({
     //     name: 'Paul',
-    //     birthdate: new NgbDate(1982, 7, 14)
+    //     birthdate: new NgbDate(1982, 7, 14),
+    //     display: true
     //   });
     // }
     // if (i === 5) {
     //   return this.fb.group({
     //     name: 'Raf',
-    //     birthdate: new NgbDate(2012, 11, 25)
+    //     birthdate: new NgbDate(2012, 11, 25),
+    //     display: true
     //   });
     // }
     return this.fb.group({
       name: '',
-      birthdate: null
+      birthdate: null,
+      display: true
     });
   }
 
   generateOutputList(value) {
     const persons = this.model.get('persons') as FormArray;
     const iedereen = persons.value.filter(person => {
-      return person.name !== '' && person.birthdate != null;
+      return person.name !== '' && person.birthdate != null && person.display === true;
     });
 
     // sort people from oldest to youngest

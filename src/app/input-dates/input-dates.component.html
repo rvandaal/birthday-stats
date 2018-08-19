@@ -3,8 +3,9 @@
   <div style="margin-left: 15px">in van maximaal 8 personen</div>
   <br>
   <div class="row" style="margin: 10px -3px">
-    <span class="col-7">Naam</span>
+    <span class="col-6">Naam</span>
     <span class="col-5">Geboortedatum</span>
+    <span class="col-1">Display</span>
   </div>  
   <app-input-date formArrayName="persons" [personGroup]="person" *ngFor="let person of persons.controls"></app-input-date>
 </div>
