@@ -34,42 +34,42 @@ export class AppComponent implements OnInit {
   }
 
   createPersonInput(i) {
-    if (i === 0) {
-      return this.fb.group({
-        name: 'Peter',
-        birthdate: new NgbDate(1947, 10, 28)
-      });
-    }
-    if (i === 1) {
-      return this.fb.group({
-        name: 'Marian',
-        birthdate: new NgbDate(1949, 4, 4)
-      });
-    }
-    if (i === 4) {
-      return this.fb.group({
-        name: 'Rob',
-        birthdate: new NgbDate(1975, 6, 19)
-      });
-    }
-    if (i === 2) {
-      return this.fb.group({
-        name: 'Frank',
-        birthdate: new NgbDate(1977, 1, 15)
-      });
-    }
-    if (i === 3) {
-      return this.fb.group({
-        name: 'Paul',
-        birthdate: new NgbDate(1982, 7, 14)
-      });
-    }
-    if (i === 5) {
-      return this.fb.group({
-        name: 'Raf',
-        birthdate: new NgbDate(2012, 11, 25)
-      });
-    }
+    // if (i === 0) {
+    //   return this.fb.group({
+    //     name: 'Peter',
+    //     birthdate: new NgbDate(1947, 10, 28)
+    //   });
+    // }
+    // if (i === 1) {
+    //   return this.fb.group({
+    //     name: 'Marian',
+    //     birthdate: new NgbDate(1949, 4, 4)
+    //   });
+    // }
+    // if (i === 4) {
+    //   return this.fb.group({
+    //     name: 'Rob',
+    //     birthdate: new NgbDate(1975, 6, 19)
+    //   });
+    // }
+    // if (i === 2) {
+    //   return this.fb.group({
+    //     name: 'Frank',
+    //     birthdate: new NgbDate(1977, 1, 15)
+    //   });
+    // }
+    // if (i === 3) {
+    //   return this.fb.group({
+    //     name: 'Paul',
+    //     birthdate: new NgbDate(1982, 7, 14)
+    //   });
+    // }
+    // if (i === 5) {
+    //   return this.fb.group({
+    //     name: 'Raf',
+    //     birthdate: new NgbDate(2012, 11, 25)
+    //   });
+    // }
     return this.fb.group({
       name: '',
       birthdate: null
