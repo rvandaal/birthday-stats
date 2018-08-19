@@ -1,6 +1,8 @@
-<div style="margin: 30px">
-    <app-input-dates [model]="model"></app-input-dates>
-    <app-output-dates [gebeurtenissen]="gebeurtenissen"></app-output-dates>
+<h1 style="margin: 30px 0 30px 70px">Birthday stats</h1>
+<div style="margin: 30px 30px 0 30px; display: flex; flex-direction: row; height: calc(100% - 30px)">
+
+    <app-input-dates [model]="model" style="flex: 0 0 auto"></app-input-dates>
+    <app-output-dates [gebeurtenissen]="gebeurtenissen" style="flex: 1 0 auto"></app-output-dates>
 </div>
 
-{{model.value | json}}
+<!-- {{model.value | json}} -->
