@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
       persons: new FormArray([])
     });
     const personsArray = this.model.get('persons') as FormArray;
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 8; i++) {
       personsArray.push(this.createPersonInput(i));
     }
     this.model.valueChanges.subscribe(value => {
