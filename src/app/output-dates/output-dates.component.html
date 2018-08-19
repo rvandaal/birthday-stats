@@ -6,7 +6,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let gebeurtenis of gebeurtenissen">
+    <tr *ngFor="let gebeurtenis of gebeurtenissen" [style.color]="gebeurtenis.isInPast ? 'gray' : 'black'">
       <td>{{gebeurtenis.datum | date: 'dd MMM yyyy'}}</td>
       <td>{{gebeurtenis.info}}</td>
     </tr>

@@ -8,4 +8,8 @@ export class Gebeurtenis {
         this.datum = datum;
         this.info = info;
     }
+
+    get isInPast() {
+        return this.datum.isBefore(moment());
+    }
 }
