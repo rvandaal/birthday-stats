@@ -13,10 +13,12 @@ export class SamenZoveelDagenOudService {
     ): Gebeurtenis {
         const count = persons.length;
         const moments = persons.map(p => moment([p.birthdate.year, p.birthdate.month - 1, p.birthdate.day]));
-        const minDate = moment.min(moments);
+        const minDate = moment.min(moments); // =geboortedatum van oudste persoon
         const t1 = moments.map(m => m.diff(minDate, 'days'));
         const t2 = _.sum(t1);
         const t3 = t2 + totaalAantalDagen;
+        // t4 = gemiddeld aantal dagen dat iemand van de minDate afzit + totaalAantalDagen / count.
+        // Je rekent dus eigenlijk met de geboortedatum van de gemiddelde persoon in het rijtje.
         const t4 = t3 / count;
         const newDate = minDate.add(t4, 'days');
         if (count === 1) {
