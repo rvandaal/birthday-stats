@@ -7,6 +7,7 @@ import { InputDatesComponent } from './input-dates/input-dates.component';
 import { OutputDatesComponent } from './output-dates/output-dates.component';
 import { InputDateComponent } from './input-date/input-date.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AantalKeerOuderService } from './services/aantal-keer-ouder.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     NgbDatepickerModule
   ],
-  providers: [],
+  providers: [
+    AantalKeerOuderService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
