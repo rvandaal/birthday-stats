@@ -1,14 +1,9 @@
-<div style="margin: 30px">
+<div [formGroup]="model">
   <h4>Voer hier de namen en geboortedata in van maximaal 6 personen</h4>
   <br>
   <div class="row" style="margin: 10px -3px">
     <span class="col-2">Naam</span>
     <span class="col-2">Geboortedatum</span>
-  </div>
-  <app-input-date></app-input-date>
-  <app-input-date></app-input-date>
-  <app-input-date></app-input-date>
-  <app-input-date></app-input-date>
-  <app-input-date></app-input-date>
-  <app-input-date></app-input-date>
+  </div>  
+  <app-input-date formArrayName="persons" [personGroup]="person" *ngFor="let person of persons.controls"></app-input-date>
 </div>

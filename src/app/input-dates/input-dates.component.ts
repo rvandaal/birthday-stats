@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormBuilder, FormArray, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-input-dates',
   templateUrl: './input-dates.component.html',
   styleUrls: ['./input-dates.component.css']
 })
-export class InputDatesComponent implements OnInit {
+export class InputDatesComponent {
 
-  constructor() { }
+  @Input()
+  model: FormGroup;
 
-  ngOnInit() {
+  get persons(): FormArray {
+    return this.model.get('persons') as FormArray;
   }
+
+  constructor(private fb: FormBuilder) { }
 
 }

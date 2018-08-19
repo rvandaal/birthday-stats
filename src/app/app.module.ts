@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { InputDatesComponent } from './input-dates/input-dates.component';
 import { OutputDatesComponent } from './output-dates/output-dates.component';
 import { InputDateComponent } from './input-date/input-date.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { InputDateComponent } from './input-date/input-date.component';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     NgbDatepickerModule
   ],
   providers: [],
