@@ -45,19 +45,19 @@ export class AppComponent implements OnInit {
         birthdate: new NgbDate(1949, 4, 4)
       });
     }
-    if (i === 2) {
+    if (i === 4) {
       return this.fb.group({
         name: 'Rob',
         birthdate: new NgbDate(1975, 6, 19)
       });
     }
-    if (i === 3) {
+    if (i === 2) {
       return this.fb.group({
         name: 'Frank',
         birthdate: new NgbDate(1977, 1, 15)
       });
     }
-    if (i === 4) {
+    if (i === 3) {
       return this.fb.group({
         name: 'Paul',
         birthdate: new NgbDate(1982, 7, 14)
@@ -81,6 +81,8 @@ export class AppComponent implements OnInit {
     const iedereen = persons.value.filter(person => {
       return person.name !== '' && person.birthdate != null;
     });
+    // sort people from oldest to youngest
+    iedereen.sort((a: any, b: any) => a.birthdate.before(b.birthdate) ? -1 : 1);
 
     for (let k = 2; k <= 5.0; k += 1) {
       for (let i = 0; i < iedereen.length; i++) {
