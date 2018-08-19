@@ -8,6 +8,7 @@ import { OutputDatesComponent } from './output-dates/output-dates.component';
 import { InputDateComponent } from './input-date/input-date.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AantalKeerOuderService } from './services/aantal-keer-ouder.service';
+import { SamenZoveelDagenOudService } from './services/samen-zoveel-dagen-oud.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AantalKeerOuderService } from './services/aantal-keer-ouder.service';
     NgbDatepickerModule
   ],
   providers: [
-    AantalKeerOuderService
+    AantalKeerOuderService,
+    SamenZoveelDagenOudService
   ],
   bootstrap: [AppComponent]
 })
