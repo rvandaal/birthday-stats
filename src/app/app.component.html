@@ -1,0 +1,9 @@
+<div style="display: flex; flex-direction: column; width: 100%; height: 100%">
+  <h1 style="margin: 10px 0 10px 50px">Birthday stats</h1>
+  <div style="margin: 0 10px 10px 10px; display: flex; flex-direction: column">
+    <app-input-dates [model]="model" style="flex: 0 0 auto"></app-input-dates>
+    <app-output-dates [events]="events" style="flex: grow"></app-output-dates>
+  </div>
+</div>
+
+<!-- {{model.value | json}} -->
